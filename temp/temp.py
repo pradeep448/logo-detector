@@ -8,9 +8,11 @@ import os
 # Get Paths
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 head, _ = os.path.split(ROOT_DIR)
+
+print(head,_) 
 trainingPath = head + "/" + "logos"
 testPath = head + "/" + "mixLogo"
-
+"""
 # Init Lists
 hists = []  # histogram of Image
 labels = []  # Label of Image
@@ -97,3 +99,5 @@ for (imagePath) in glob.glob(testPath + "/*.*"):
         # If Image couldn't be Read
         print(imagePath)
         print("Test Image couldn't be read")
+
+        """
