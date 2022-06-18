@@ -3,7 +3,7 @@ from lib import *
 hists = []  # histogram of Image
 labels = []  # Label of Image
 
-for imagePath in glob.glob(trainingPath + "/*/*.*"):
+for imagePath in glob.glob('data/train/*/*'):
     # get label from folder name
     label = imagePath.split("/")[-2]
 

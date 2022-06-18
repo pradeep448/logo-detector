@@ -10,4 +10,4 @@ import os
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 head, _ = os.path.split(ROOT_DIR)
 
-print(head,_)
+# print(head,'\n',_)
