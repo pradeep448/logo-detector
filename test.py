@@ -1,5 +1,8 @@
+from lib import *
 # Check Test Images for Model
-for (imagePath) in glob.glob(testPath + "/*.*"):
+model=joblib.load('model\\model.pkl')
+# def test()
+for (imagePath) in glob.glob('data\\test\\*'):
     # Read Images
     image = cv.imread(imagePath)
     try:

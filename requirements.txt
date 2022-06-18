@@ -1,4 +1,6 @@
 sklearn
-skimage
+scikit-image
 numpy
 opencv-python
+imgaug
+joblib
