@@ -33,7 +33,8 @@ for imagePath in glob.glob('data\\train\\*\\*'):
         print("Training Image couldn't be read")
 
 # Create model as Nearest Neighbors Classifier
-model = KNeighborsClassifier(n_neighbors=5)
+# model = KNeighborsClassifier(n_neighbors=5)
+model=RandomForestClassifier()
 
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test=train_test_split(hists,labels,test_size=0.2)
@@ -75,6 +76,7 @@ for (imagePath) in glob.glob('data\\test\\*'):
         )
         # Predict in model
         predict = model.predict(hist.reshape(1, -1))[0]
+
 
         # Make pictures default Height
         height, width = image.shape[:2]
