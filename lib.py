@@ -10,8 +10,6 @@ import joblib
 import sklearn
 import sys
 import platform as pf
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 import shutil
 
 # Get Paths
