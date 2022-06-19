@@ -1,8 +1,7 @@
 sklearn
 scikit-image
 numpy
-opencv-python
-opencv-python-headless
+opencv-contrib-python-headless
 joblib
 Flask
 gunicorn==19.9.0
