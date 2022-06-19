@@ -1,7 +1,7 @@
-Aliianz logo detector
+# Aliianz logo detector
 
-Folder structure:
-
+## Folder structure
+```bash
 data            # All images stored here
     predict     # Images can be used for prediction    
     raw         # Raw images used for augmentation
@@ -12,28 +12,40 @@ model           # model directory
 app.py          # flask application for web deployment
 augment.py      # augmentation
 lib.py          # library
-main.py         # tarin, test, evaluate, validate
+main.py         # train, test, evaluate, validate
 README.md       # Readme
 requirements.txt    # python libraries to be installed
+Procfile
+```
 
-
-Prerequisites:
-NOTE: 
-This project has been tested on Windows OS, Python 3.10.5 interpreter. 
-Classes:
+## Prerequisites
+### Note
+This project has been tested on Windows 10 OS, Python 3.10.5 interpreter. 
+### Classes
 1: Logo Present
+
 0: logo absent
 
-Steps:
-1. Install Python 3.10.5
-2. cd REPO 
-3. pip install -r requirements
-4. python augment.py # create augemented images
-5. python main.py # modelling, train, test, evaluate, serialize
-6. python app.py # to run flask app locally
+## Steps
+```bash
+# Install Python 3.10.5
+
+# get repo
+git clone --branch master https://github.com/pradeep448/logo-detector.git
+cd REPO 
+# install libraries
+pip install -r requirements
+# create augmented images
+python augment.py
+# modelling, train, test, evaluate, serialize
+python main.py
+# run flask app locally (optional)
+python app.py # to run flask app locally
+```
+
+## Test deployed model on Cloud
+Open following URL:
 
 
-Test model on Cloud:
-URL: 
 
 
