@@ -26,6 +26,10 @@ Steps:
 2. cd REPO 
 3. pip install -r requirements
 4. python augment.py # create augemented images
-5. python main.py # modelling, train, test, evaluate
+5. python main.py # modelling, train, test, evaluate, serialize
+
+
+Test model on Cloud:
+URL: 
 
 

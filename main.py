@@ -107,7 +107,7 @@ def train_test_evaluate(data_folder_path):
             # Write predicted label over the Image
             # 1 -> allianz logo present
             # 0 -> logo absent
-            cv.putText(image, predict.title(), (10, 30),
+            cv.putText(image, mapper(predict), (10, 30),
                     cv.FONT_HERSHEY_TRIPLEX, 1.2, (0, 255, 0), 4)
 
             # Get Image name and show Image

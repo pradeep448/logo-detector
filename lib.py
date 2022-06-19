@@ -1,6 +1,5 @@
 # this is library file
 
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from skimage import exposure, feature
 import numpy as np
@@ -33,6 +32,27 @@ def get_path_divider():
 def abspath(loc):
     return os.path.abspath(loc)
 
+def predict(imagePath,model):
+    image = cv.imread(imagePath)
+    gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+    logo = cv.resize(gray, (200, 100))
+    hist = feature.hog(
+        logo,
+        orientations=9,
+        pixels_per_cell=(10, 10),
+        cells_per_block=(2, 2),
+        transform_sqrt=True,
+        block_norm="L1"
+    )
+    # Predict in model
+    return model.predict(hist.reshape(1, -1))[0]
+
+# class name mapper
+def mapper(class_):
+    if class_=='1':
+        return 'Present'
+    elif class_=='0':
+        return 'Absent'
 ############################
 
 path_div=get_path_divider()
