@@ -2,5 +2,4 @@ sklearn
 scikit-image
 numpy
 opencv-python
-imgaug
 joblib
