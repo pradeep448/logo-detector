@@ -5,7 +5,7 @@ opencv-python
 opencv-python-headless
 joblib
 Flask
-gunicorn
+gunicorn==19.9.0
 itsdangerous
 Jinja2
 MarkupSafe
