@@ -3,12 +3,9 @@ scikit-image
 numpy
 opencv-python
 joblib
-tensorflow
 Flask
 gunicorn
 itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
-matplotlib
-pandas
