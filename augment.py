@@ -3,13 +3,13 @@ from lib import *
 def augment(data_dir):
     
     dir = f'{data_dir}{path_div}train{path_div}1'
-
+    # clear directory
     try:
         for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
     except:
         pass
-
+    # genrate augmented images 
     datagen = ImageDataGenerator(
             rotation_range=4,
             width_shift_range=0.2,
@@ -21,14 +21,11 @@ def augment(data_dir):
             fill_mode='nearest',
             )
 
-    # img_path='D:\\CV_master\\comp\\allianz\\REPO\\data\\raw\\download_cleaned.png'
     img_path=abspath(f'data{path_div}raw{path_div}download_cleaned.png')
     img = load_img(img_path)  # this is a PIL image
-    x = img_to_array(img)  # this is a Numpy array with shape (3, 150, 150)
-    x = x.reshape((1,) + x.shape)  # this is a Numpy array with shape (1, 3, 150, 150)
+    x = img_to_array(img)  
+    x = x.reshape((1,) + x.shape)  
 
-    # the .flow() command below generates batches of randomly transformed images
-    # and saves the results to the `preview/` directory
     print('INFO: Augmenting...')
     i = 0
     for batch in datagen.flow(x, batch_size=1,
