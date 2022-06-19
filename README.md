@@ -46,6 +46,8 @@ python app.py # to run flask app locally
 ## Test deployed model on Cloud
 Open following URL:
 
+https://allianz-logo-detector.herokuapp.com/
+
 
 
 
