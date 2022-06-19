@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request
-from tensorflow.keras.preprocessing import image
-
 from lib import *
 
 app = Flask(__name__)
 
 dic = {0 : 'logo_absent', 1 : 'logo_present'}
-
+model=joblib.load(model_path)
 # routes
 @app.route("/", methods=['GET', 'POST'])
 def main():
@@ -24,7 +22,7 @@ def get_output():
 		img_path = "static/" + img.filename	
 		img.save(img_path)
 
-		p = mapper(predict(img_path))
+		p = mapper(predict(img_path,model))
 
 	return render_template("index.html", prediction = p, img_path = img_path)
 
