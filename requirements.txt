@@ -2,6 +2,7 @@ sklearn
 scikit-image
 numpy
 opencv-python
+python3-opencv
 joblib
 Flask
 gunicorn
