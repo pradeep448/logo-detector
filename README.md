@@ -34,7 +34,7 @@ This project has been tested on Windows 10 OS, Python 3.10.5 interpreter.
 git clone --branch master https://github.com/pradeep448/logo-detector.git
 cd logo-detector 
 # install libraries
-pip install -r requirements
+pip install -r requirements.txt
 # create augmented images
 python augment.py
 # modelling, train, test, evaluate, serialize
