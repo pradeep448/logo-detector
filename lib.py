@@ -49,9 +49,9 @@ def predict(imagePath,model):
 
 # class name mapper
 def mapper(class_):
-    if class_=='1':
+    if class_ in [1,'1']:
         return 'Present'
-    elif class_=='0':
+    elif class_ in [0,'0']:
         return 'Absent'
 ############################
 

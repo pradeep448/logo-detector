@@ -20,6 +20,9 @@ requirements.txt    # python libraries to be installed
 Prerequisites:
 NOTE: 
 This project has been tested on Windows OS, Python 3.10.5 interpreter. 
+Classes:
+1: Logo Present
+0: logo absent
 
 Steps:
 1. Install Python 3.10.5
@@ -27,6 +30,7 @@ Steps:
 3. pip install -r requirements
 4. python augment.py # create augemented images
 5. python main.py # modelling, train, test, evaluate, serialize
+6. python app.py # to run flask app locally
 
 
 Test model on Cloud:

@@ -47,7 +47,7 @@ def train_test_evaluate(data_folder_path):
             )
             # Add value into Lists
             hists.append(hist)
-            labels.append(label)
+            labels.append(int(label))
         except cv.error:
             # If Image couldn't be Read
             print(imagePath)
@@ -66,8 +66,8 @@ def train_test_evaluate(data_folder_path):
     y_pred_test=model.predict(X_test)
     # evaluate
     print('INFO: Evaluating...')
-    acc_train=sklearn.metrics.accuracy_score(y_test,y_pred_train)
-    f1_train=sklearn.metrics.f1_score(y_test,y_pred_train)
+    acc_train=sklearn.metrics.accuracy_score(y_train,y_pred_train)
+    f1_train=sklearn.metrics.f1_score(y_train,y_pred_train)
     acc_test=sklearn.metrics.accuracy_score(y_test,y_pred_test)
     f1_test=sklearn.metrics.f1_score(y_test,y_pred_test)
     print(f'Training: Accuracy = {acc_train}, f1 score = {f1_train}')
